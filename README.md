@@ -48,7 +48,8 @@ Each stage is its own Jupyter notebook, numbered in run order:
 A star schema: one fact table holding every transaction, surrounded by two lookup tables.
 
 ```
-<img width="887" height="326" alt="model-view" src="https://github.com/user-attachments/assets/52c50c52-87b9-4f51-a59b-06b938f3ef26" />
+<img width="887" height="326" alt="model-view" src="https://github.com/user-attachments/assets/fd947a3d-6110-41d4-9f85-35e77be373f9" />
+
 
 ```
 
