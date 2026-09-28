@@ -48,28 +48,11 @@ Each stage is its own Jupyter notebook, numbered in run order:
 A star schema: one fact table holding every transaction, surrounded by two lookup tables.
 
 ```
-dim_customer                    dim_product
-┌───────────────┐              ┌───────────────┐
-│ customer_id PK│              │ stock_code  PK│
-│ country       │              │ description   │
-└───────┬───────┘              └───────┬───────┘
-        │                              │
-        │         fact_sales           │
-        │      ┌────────────────┐      │
-        └─────►│ id           PK│◄─────┘
-               │ invoice_no     │
-               │ stock_code  FK │
-               │ customer_id FK │
-               │ invoice_date   │
-               │ quantity       │
-               │ unit_price     │
-               │ line_total     │
-               │ is_cancellation│
-               │ country        │
-               └────────────────┘
+<img width="887" height="326" alt="model-view" src="https://github.com/user-attachments/assets/52c50c52-87b9-4f51-a59b-06b938f3ef26" />
+
 ```
 
-*(Insert the actual Power BI Model view screenshot here once you have it — replace this ASCII diagram with the real image.)*
+
 
 ## Data quality issues found and how each was handled
 
@@ -103,7 +86,11 @@ Built in Power BI Desktop, connected live to MySQL (not a static export — the 
 - Guest Checkout % measure (11.92% of revenue comes from orders with no linked customer account, despite guest checkouts making up ~23% of individual transactions — guest orders skew smaller on average)
 - Write-up of the case-sensitivity and whitespace duplicate-key bugs found and fixed during the build
 
-*(Insert your final screenshots of both pages here.)*
+<img width="776" height="435" alt="executive-summary" src="https://github.com/user-attachments/assets/fe5d7a4b-4061-48a3-9051-c36e3ef63175" />
+
+<img width="756" height="314" alt="data-quality" src="https://github.com/user-attachments/assets/9fa6d20e-b6ba-4b23-bbbb-c91510f0abb9" />
+
+
 
 ## Key findings
 
